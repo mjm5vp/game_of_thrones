@@ -20,8 +20,13 @@
    src: url('game_of_thrones.ttf') format("truetype");
  }
 
- /* assets/fonts */
- @font-face {
+ /*@font-face {
    font-family: "thrones";
    src: font-url('game_of_thrones.ttf') format("truetype");
+ }*/
+
+ body {
+   font-family: "thrones";
+   text-align: center;
+   color: #7C2A30;
  }
