@@ -3,6 +3,11 @@
 <div class="character">
   <%= image_tag(@character.img_url)%>
   <p>Title: <%= @character.title%></p>
+  <p>Categories:
+    <% @categories.each do |category| %>
+      <%= category.name %>  
+    <% end %>
+  </p>
 
     <% if @character.is_alive == true %>
       <p>ALIVE</p>

@@ -17,3 +17,11 @@ jon_snow = Character.create!(name: "Jon Snow", title:"King of the North", is_ali
 cersei = Character.create!(name: "Cersei Lannister", title: "Queen of the Andals and the First Men", is_alive: true, img_url: "cersei.jpg", house: lannister)
 olenna = Character.create!(name: "Olenna Tyrell", title: "The Queen of Thorns", is_alive: true, img_url: "olenna.jpg", house: tyrell)
 margaery = Character.create!(name: "Margaery Tyrell", title: "Queen Consort", is_alive: false, img_url: "margaery.png", house: tyrell)
+
+brave = Category.create!(name: "Brave")
+humble = Category.create!(name: "Humble")
+strong = Category.create!(name: "Strong")
+
+jon_is_brave = Tag.create!(character: jon_snow, category: brave)
+jon_is_humble = Tag.create!(character: jon_snow, category: humble)
+cersei_is_strong = Tag.create!(character: cersei, category: strong)
