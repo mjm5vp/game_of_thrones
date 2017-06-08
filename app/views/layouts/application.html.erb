@@ -9,6 +9,15 @@
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <h1 class="header" >Game of Thrones</h1>
+
+    <div class="titles">
+      <h2 class=""><%= link_to "Houses", houses_path, class: 'link' %>  |  <%= link_to "Characters", characters_path, class: 'link' %></h2>
+    </div>
+
     <%= yield %>
   </body>
 </html>

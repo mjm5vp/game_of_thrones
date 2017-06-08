@@ -1,2 +1,18 @@
-<h1>Characters#new</h1>
-<p>Find me in app/views/characters/new.html.erb</p>
+<h1>New Character for House <%= @house.name %></h1>
+
+
+<%= form_for [@house,@character] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :"Alive?" %>
+  <%= f.text_field :is_alive %>
+  <br>
+  <%= f.label :img_url %>
+  <%= f.text_field :img_url %>
+  <br>
+  <%= f.submit %>
+<% end %>

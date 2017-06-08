@@ -1,2 +1,20 @@
-<h1>Houses#new</h1>
-<p>Find me in app/views/houses/new.html.erb</p>
+<h1>New House</h1>
+
+<%= form_for @house do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :words %>
+  <%= f.text_field :words %>
+  <br>
+  <%= f.label :lord %>
+  <%= f.text_field :lord %>
+  <br>
+  <%= f.label :seat %>
+  <%= f.text_field :seat %>
+  <br>
+  <%= f.label :img_url %>
+  <%= f.text_field :img_url %>
+  <br>
+  <%= f.submit %>
+<% end %>

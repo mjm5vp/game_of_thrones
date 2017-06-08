@@ -1,2 +1,17 @@
-<h1>Houses#show</h1>
-<p>Find me in app/views/houses/show.html.erb</p>
+<h1>House <%= @house.name%></h1>
+
+<%= image_tag(@house.img_url)%>
+
+<p>Words: <%= @house.words%></p>
+<p>Lord: <%= @house.lord%></p>
+<p>Seat: <%= @house.seat%></p>
+<p>Members:
+
+<% @characters.each do |character|%>
+  <%= link_to character.name, house_character_path(@house, character), class: 'link' %>
+  <%#= image_tag character.img_url%>
+<%end%>
+<%= link_to "(Add)", new_house_character_path(@house), class: 'link'%>
+</p>
+<br>
+<%= link_to "(Edit)", edit_house_path(@house), class: 'link'%>

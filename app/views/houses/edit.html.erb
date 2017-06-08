@@ -1,2 +1,25 @@
-<h1>Houses#edit</h1>
-<p>Find me in app/views/houses/edit.html.erb</p>
+<h1><%=@house.name%></h1>
+<h3>Edit House</h2>
+
+<%= form_for @house do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :words %>
+  <%= f.text_field :words %>
+  <br>
+  <%= f.label :lord %>
+  <%= f.text_field :lord %>
+  <br>
+  <%= f.label :seat %>
+  <%= f.text_field :seat %>
+  <br>
+  <%= f.label :img_url %>
+  <%= f.text_field :img_url %>
+  <br>
+  <%= f.submit %>
+<% end %>
+
+<%= form_for @house, method: :delete do |f| %>
+  <%= f.submit "Delete!", class: "delete" %>
+<% end %>

@@ -1,2 +1,16 @@
-<h1>Characters#show</h1>
-<p>Find me in app/views/characters/show.html.erb</p>
+<h1><%= @character.name %></h1>
+
+<div class="character">
+  <%= image_tag(@character.img_url)%>
+  <p>Title: <%= @character.title%></p>
+
+    <% if @character.is_alive == true %>
+      <p>ALIVE</p>
+    <% else %>
+      <p>Dead</p>
+    <% end %>
+
+    <%= link_to "(Edit)", edit_house_character_path(@house, @character), class: 'link'%>
+
+
+</div>
